@@ -1,3 +1,10 @@
 # What should I put here??
-
 .env
+*.env
+
+data/
+postgres-data/
+
+.vscode/
+.vs
+.db
