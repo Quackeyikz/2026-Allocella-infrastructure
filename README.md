@@ -7,19 +7,21 @@ This repository will mostly be about docker containerization. I don't know about
 - PostgreSQL v15
     - Containerized
     - Using PostgreSQL v15 (quite lightweight they say)
-    - Using standard port for Postgre (5432)
-    - Have been made sure to be ready before accepting connections `healthcheck` on [docker_compose.yml](docker_compose.yml)
+    - ~~Using standard port for Postgre (5432)~~ Can adapt to .env
+    - Have been made sure to be ready before accepting connections on [docker_compose.yml](docker_compose.yml)
 
-## Run
+## How to Run The Infrastructure
 
-### **Prequisities:**
+#### Prequisities:
 - [Docker](https://www.docker.com/products/docker-desktop/)
 
-### Step-by-Step
-Assuming you have cloned or have the repository in local folder.
+#### Step-by-Step
+Assuming you have **cloned** or have the repository in local folder.
 
 1. Locate to this _infrastructure_ repository in local directory.
 2. Make a `.env` file, and fill in the required information. Use [.env.example](.env.example) for reference.
+    - `cp .env.example .env`
+    - Edit the information needed.
 3. Run `docker-compose up -d`. This will create the Postgre image (database) in detached mode (in background).
     -  To validate if PostgreSQL was created with the right username:
         ```bash
