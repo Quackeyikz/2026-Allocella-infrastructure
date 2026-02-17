@@ -1,9 +1,12 @@
 # Allocella - Infrastructure
 
-This repository will mostly be about docker containerization. I don't know about orchestrastion tho...
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)
+
+This is the DATABASE repository. The initial setup you must do will be provided down [here](#how-to-run-the-infrastructure), please read the alternative choice before using this infrastructure. To see the main docs of Allocella, see [Allocella Docs](https://github.com/Quackeyikz/2026-Allocella-docs).
 
 ## Tech Stack
 - Docker
+- Alpine
 - PostgreSQL v15
     - Containerized
     - Using PostgreSQL v15 (quite lightweight they say)
@@ -12,21 +15,31 @@ This repository will mostly be about docker containerization. I don't know about
 
 ## How to Run The Infrastructure
 
+> ### (Important!)
+> You **are not required** to use this infrastructure setup. All you need is a DATABASE. This guide is just providing **one way** to make a database, _although more flexibly_.
+
+If you're sure and ready to proceed, don't forget to get all the requirements.
+
 #### Prequisities:
 - [Docker](https://www.docker.com/products/docker-desktop/)
 
 #### Step-by-Step
 Assuming you have **cloned** or have the repository in local folder.
 
-1. Locate to this _infrastructure_ repository in local directory.
-2. Make a `.env` file, and fill in the required information. Use [.env.example](.env.example) for reference.
-    - `cp .env.example .env`
+1. `cd 2026-Allocella-infrastructure`
+2. `cp .env.example .env`
     - Edit the information needed.
-3. Run `docker-compose up -d`. This will create the Postgre image (database) in detached mode (in background).
+3. Run `docker-compose up -d`.
+    - This will create the Postgre image (database) in detached mode (in background).
     -  To validate if PostgreSQL was created with the right username:
         ```bash
-        docker exec -it allocella-postgres psql -U allocella_user -d allocella_db
+        docker exec -it allocella-postgres psql -U {your_username} -d {your_db_name}
         ```
     - Type `\du` and press ENTER.
-    - If `allocella_user` listed on the table, **variables have worked!**
+    - If `{your_username}` listed on the table, **variables have worked!**
     - Type `\q` to exit.
+
+
+## Contributions
+
+It's just me gng, Quackeyikz.
