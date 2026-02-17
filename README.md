@@ -1,5 +1,7 @@
 # Allocella - Infrastructure
 
+![Docker](https://www.docker.com/app/uploads/2023/08/logo-guide-logos-1.svg)
+
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)
 
 This is the DATABASE repository. The initial setup you must do will be provided down [here](#how-to-run-the-infrastructure), please read the alternative choice before using this infrastructure. To see the main docs of Allocella, see [Allocella Docs](https://github.com/Quackeyikz/2026-Allocella-docs).
@@ -11,7 +13,7 @@ This is the DATABASE repository. The initial setup you must do will be provided 
     - Containerized
     - Using PostgreSQL v15 (quite lightweight they say)
     - ~~Using standard port for Postgre (5432)~~ Can adapt to .env
-    - Have been made sure to be ready before accepting connections on [docker_compose.yml](docker_compose.yml)
+    - Have been made sure to be ready before accepting connections on [docker_compose.yml](docker-compose.yml)
 
 ## How to Run The Infrastructure
 
